@@ -1,0 +1,102 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(145deg, #141E30, #243B55);
+}
+
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.glowing {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px #FF6F61, 0 0 20px #FFD700, 0 0 30px #FF6F61;
+    animation: glowAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #FF6F61, 0 0 20px #FFD700, 0 0 30px #FF6F61;
+    }
+    100% {
+        text-shadow: 0 0 15px #FFD700, 0 0 30px #FF6F61, 0 0 45px #FFD700;
+    }
+}
+
+
+.subtext {
+    margin-top: 10px;
+    color: #CCCCCC;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.floating-balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    bottom: -100px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    left: 35%;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+    left: 85%;
+    animation-delay: 6.5s;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-200px) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px) scale(1);
+        opacity: 0;
+    }
+}
+
